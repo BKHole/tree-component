@@ -1,0 +1,6 @@
+/* components/tree/index.wxss */
+
+.node {
+  padding-left: 1em;
+  line-height: 1.5em;
+}

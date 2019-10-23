@@ -1,0 +1,11 @@
+<!--components/tree/index.wxml-->
+<view>
+  <view>
+    <text wx:if='{{ isBranch }}' bindtap='toggle'>{{ open ? ' - ' : ' + ' }} </text>
+    <text wx:else> · </text>
+    <text bindtap='tapItem' data-id='{{ model.id }}'>{{ model.text }}</text>
+  </view>
+  <view class="node" wx:if='{{ isBranch }}' hidden='{{ !open }}'>
+    <tree wx:for='{{ model.nodes }}' wx:key='id' model='{{ item }}'></tree>
+  </view>
+</view>
